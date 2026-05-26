@@ -1,0 +1,11 @@
+package FirstStepsInJavaSpringBoot_04.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(HttpStatus.BAD_REQUEST)//aqui é onde retornamos os status da aplicação
+public class UnsupportedMathOperationException extends RuntimeException {
+    public UnsupportedMathOperationException(String message) {
+        super(message);
+    }
+}
